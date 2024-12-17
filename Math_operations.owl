@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ex="http://example.org#">
+
+  <!-- Classes -->
+  <rdf:Description rdf:about="http://example.org#MathematicalOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>MathematicalOperation</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#SumOfSquares">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#MathematicalOperation"/>
+    <rdfs:label>Sum of Squares</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#SumOfCubes">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#MathematicalOperation"/>
+    <rdfs:label>Sum of Cubes</rdfs:label>
+  </rdf:Description>
+
+  <!-- Object Properties -->
+  <rdf:Description rdf:about="http://example.org#hasNum1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org#MathematicalOperation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#hasNum2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org#MathematicalOperation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#hasNum3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org#MathematicalOperation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#hasSumOfSquares">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org#SumOfSquares"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#hasSumOfCubes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org#SumOfCubes"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+
+  <!-- Individuals (Example Operations) -->
+  <rdf:Description rdf:about="http://example.org#Operation1">
+    <rdf:type rdf:resource="http://example.org#SumOfSquares"/>
+    <ex:hasNum1>2</ex:hasNum1>
+    <ex:hasNum2>3</ex:hasNum2>
+    <ex:hasNum3>4</ex:hasNum3>
+    <ex:hasSumOfSquares>29</ex:hasSumOfSquares>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#Operation2">
+    <rdf:type rdf:resource="http://example.org#SumOfCubes"/>
+    <ex:hasNum1>2</ex:hasNum1>
+    <ex:hasNum2>3</ex:hasNum2>
+    <ex:hasNum3>4</ex:hasNum3>
+    <ex:hasSumOfCubes>99</ex:hasSumOfCubes>
+  </rdf:Description>
+
+</rdf:RDF>
